@@ -62,10 +62,6 @@ DetectZygisk: Final detection result: ZYGISK DETECTED
 DetectZygisk: Returning: Detected Zygisk
 ```
 
-# Main Point 
-
-**Using this method, it is also possible for an unprivileged application to retrieve the PID of the zygote64 process, which is typically considered a restricted system process**
-
 
 # Testing
 
