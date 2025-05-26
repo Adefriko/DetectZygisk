@@ -33,3 +33,36 @@ ptrace(PTRACE_DETACH, zygote_pid, 0, 0);
 The syscall ptrace stop will set the ptrace event message to zero.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Implementation
+
+Core idea is written by ChatGPT deep research ( Good use of AI )
+
+```sh
+DetectZygisk: JNI function called - starting detection
+DetectZygisk: Starting Zygisk detection
+DetectZygisk: fork() returned: 22137
+DetectZygisk: Parent process waiting for child: 22137
+DetectZygisk: fork() returned: 0
+DetectZygisk: Child process started
+DetectZygisk: Parent PID: 22098
+DetectZygisk: Attempting ptrace(PTRACE_ATTACH, 22098, 0, 0)
+DetectZygisk: ptrace(PTRACE_ATTACH) successful
+DetectZygisk: Calling waitpid(22098, &status, 0)
+DetectZygisk: waitpid() successful, status: 4991
+DetectZygisk: Calling ptrace(PTRACE_GETEVENTMSG, 22098, 0, &msg)
+DetectZygisk: ptrace(PTRACE_GETEVENTMSG) successful, msg: 1456
+DetectZygisk: Calling ptrace(PTRACE_DETACH, 22098, 0, 0)
+DetectZygisk: ptrace(PTRACE_DETACH) completed
+DetectZygisk: Zygisk DETECTED - ptrace have zygote64 pid: 1456
+DetectZygisk: waitpid returned: 22137, status: 256
+DetectZygisk: Child exited normally with exit code: 1
+DetectZygisk: Final detection result: ZYGISK DETECTED
+DetectZygisk: Returning: Detected Zygisk
+```
+
+# Main Point 
+
+**Using this method, it is also possible for an unprivileged application to retrieve the PID of the zygote64 process, which is typically considered a restricted system process**
+
