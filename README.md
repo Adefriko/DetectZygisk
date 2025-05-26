@@ -63,7 +63,13 @@ DetectZygisk: Returning: Detected Zygisk
 ```
 
 
-# Testing
+# ✅ Testing
 
-https://github.com/PerformanC/ReZygisk detected.
+| Repository                                                                                      | Status      |
+|--------------------------------------------------------------------------------------------------|-------------|
+| [PerformanC/ReZygisk](https://github.com/PerformanC/ReZygisk)                                   | ✅ Detected |
+| [Dr-TSNG/ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)                                     | ✅ Detected |
+| [JingMatrix/NeoZygisk](https://github.com/JingMatrix/NeoZygisk)                                 | ✅ Detected |
+| [topjohnwu/Magisk - zygisk core](https://github.com/topjohnwu/Magisk/tree/master/native/src/core/zygisk) | ❌ Not Detected |
+
 
