@@ -66,3 +66,8 @@ DetectZygisk: Returning: Detected Zygisk
 
 **Using this method, it is also possible for an unprivileged application to retrieve the PID of the zygote64 process, which is typically considered a restricted system process**
 
+
+# Testing
+
+https://github.com/PerformanC/ReZygisk detected.
+
